@@ -1,0 +1,16 @@
+// Get the a*a if b is 2 and 2*(a+1) if b was -2 ===> note (the b is either 2 or -2)
+// if the b was either 1 or -1 then the equation will be  int result = ((b + 1) / 2 * a * a) + ((1 - b) / 2 * (2 //* a + 1));
+
+#include <iostream>
+using namespace std;
+
+int main() {
+    int a, b;
+    cin >> a >> b;
+
+    int result = ((b + 2) / 4 * a * a) + ((2 - b) / 4) * (2 * a + 1);
+
+
+    cout << result << endl;
+    return 0;
+}
