@@ -1,0 +1,10 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+    int a, b;
+    cin >> a >> b;
+    int result = ((b + 2) / 4.0 * a * a + (2 - b / 4.0) * (2 * a + 1));
+    cout << result << endl;
+    return 0;
+}
