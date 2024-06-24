@@ -1,0 +1,25 @@
+# include <iostream>
+using namespace std ;
+int main()
+{
+    int  number;
+    cin>> number;
+
+    bool is_even1 = (number%2 == 0);
+    cout<<is_even1;
+
+    double check = (number / 2.0);
+    int finaly = check - (int)check;
+    bool is_even2 = (finaly == 0);
+
+    cout<<is_even2;
+
+
+    int get_last = number%10;
+    bool is_even3 = ( get_last==0 || get_last==2 || get_last==4 ||get_last==6 || get_last==8);
+    cout<<"\n"<<is_even3;
+
+
+
+
+    return 0;
