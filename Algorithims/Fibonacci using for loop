@@ -1,0 +1,18 @@
+#include<iostream>
+using namespace std;
+
+int main()
+{
+    int a=0,b=1,c,n,cnt;
+    cin>>n;
+    cout<<a<<" "<<b<<" ";
+    for (int cnt=2 ; cnt < n; ++cnt){
+        c=a+b;
+        a=b;
+        b=c;
+        cout<<c<<" ";
+    }
+
+
+    return 0;
+}
