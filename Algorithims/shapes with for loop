@@ -1,0 +1,19 @@
+when doing a shape using nested loop pls cosider the the first for loop is the ROWS and the second for loop is the for COLUMNS.
+
+## EXAPLES:
+
+1- a square shape :
+#include<iostream>
+using namespace std;
+
+int main() {
+
+    for (int i=1 ; i<=5 ;++i) {
+        for( int j=1; j<=5; ++j)
+            cout<<"*  ";
+        cout<<endl;
+    }
+    return 0;
+}
+########################################
+2- a shape
