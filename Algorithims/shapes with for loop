@@ -2,7 +2,7 @@ when doing a shape using nested loop pls cosider the the first for loop is the R
 
 ## EXAPLES:
 
-1- a square shape :
+1- a square shape:
 #include<iostream>
 using namespace std;
 
@@ -15,5 +15,65 @@ int main() {
     }
     return 0;
 }
-########################################
-2- a shape
+#########################################################
+2- a centered triangle shape:
+#include <iostream>
+using namespace std;
+
+int main() {
+    int n;
+    cin >> n;
+    int e = 1;
+
+    for (int i = 1; i <= n; ++i) {
+        // Print spaces
+        for (int s = n - 1; s >= i; --s)
+            cout << "  ";
+
+        // Print asterisks
+        for (int j = 0; j < e; ++j)
+            cout << " *";
+
+        cout << endl;
+        e += 2;
+    }
+
+    return 0;
+}
+##########################################################
+
+
+
+3- The letter X shape (or any letter): 
+#include <iostream>
+using namespace std;
+
+int main() {
+    int n;
+    cin>>n;
+    for (int i = 1; i <= n; ++i) // i=1
+    {
+    for (int j=1; j<=n; ++j) {
+        if (i==j || j==(n+1)-i)
+            cout<<"*";
+        else
+            cout<<" ";
+    }
+        cout<<endl;
+    }
+
+    return 0;
+}
+###########################################################
+important note:
+when dealing with the shapes put that form in your mind and you will see it easy to do the shape or the letter.
+1   2   3   4   5  ====> that's for the first for loop.
+1   *   *   *   *
+2   *   *   *   *
+3   *   *   *   *
+4   *   *   *   *
+5   *   *   *   *
+|
+|
+▼
+That's for the second for loop.
