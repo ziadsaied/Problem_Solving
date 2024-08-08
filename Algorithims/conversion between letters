@@ -4,7 +4,7 @@ using namespace std;
 int main() {
 
     char chr ;
-    cout <<"Enter your character: ";
+    cout <<"Enter your character:  ";
     cin>>chr;
 
     if (chr >= 'A' && chr <= 'Z') {
@@ -18,6 +18,8 @@ int main() {
         chr = chr - 'a' + 'A';
         cout<<chr<<" is the upper case of the character.\n";
     }
+    else if (chr >= 0 && chr <= 9)
+        cout<<chr<<" is just a digit :)";
         else
         cout<<chr<<" This is neither a lower or an upper case character!\n";
 
