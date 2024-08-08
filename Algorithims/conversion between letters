@@ -1,0 +1,26 @@
+#include<iostream>
+using namespace std;
+
+int main() {
+
+    char chr ;
+    cout <<"Enter your character: ";
+    cin>>chr;
+
+    if (chr >= 'A' && chr <= 'Z') {
+        cout<<chr<<" This is an upper case character.\n";
+        chr = chr - 'A' +'a';
+        cout<<chr<<" is the lower case of the character.\n";
+    }
+
+    else if (chr >= 'a' && chr <= 'z') {
+        cout<<chr<<" This is a lower case character.\n";
+        chr = chr - 'a' + 'A';
+        cout<<chr<<" is the upper case of the character.\n";
+    }
+        else
+        cout<<chr<<" This is neither a lower or an upper case character!\n";
+
+
+return 0;
+}
