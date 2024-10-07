@@ -1,0 +1,25 @@
+def calculator (num1, operator, num2):
+    if operator == "+":
+        return num1 + num2
+    elif operator == "-":
+        return num1 - num2
+    elif operator == "*":
+        return num1 * num2
+    elif operator == "/":
+        return num1 / num2
+    else:
+        return "Invalid operator"
+    
+    
+####### Solution 1:    
+# u_input = (input("Enter 2 number separated by the operator: ").split())
+# num1 = float(u_input[0])
+# operator = u_input[1]
+# num2 = float(u_input[2])
+# print (calculator(num1, operator, num2))
+
+####### Solution 2(better):
+num1, operator, num2 = input("Enter two numbers separated by an operator: ").split()
+
+
+print (calculator(float(num1), operator,float (num2)))
