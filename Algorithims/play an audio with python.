@@ -1,0 +1,20 @@
+import librosa
+import soundfile as sf
+import sounddevice as sd
+
+audio = r"E:\ZIAD\ENG ZIAD\Collage\LEVEL 2\Sem 1\Computer Acoustics\Sections\MOONLIGHT.mp3" ## The (r) here is to handle the escape characters.
+audio, sr = librosa.load(audio ,sr=None) ## Loading the file.
+
+print(f"Duration: {librosa.get_duration(y=audio, sr=sr)}second") ## Print the duration.[Librosa]
+
+louder_audio = audio * 1.5 ## How to increase the volume
+start_time = 5                                              ##
+end_time = 10                                               ## cutting the audio by multiply the second u want by the samling rate.
+cut_audio = louder_audio[start_time * sr : end_time * sr]   ##
+
+output_file = "Cutted Moonlight.mp3" ## output name file.
+
+sf.write(output_file,  cut_audio, sr) ## saving the file. [Sound File]
+
+sd.play (cut_audio, sr) ## playing the audio.                   [Sound Device]
+sd.wait ()              ## a must do to play the audio.
